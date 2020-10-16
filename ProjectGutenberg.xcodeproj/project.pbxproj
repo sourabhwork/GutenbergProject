@@ -15,7 +15,6 @@
 		A80724FA25377BB000CE4531 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80724F925377BB000CE4531 /* Book.swift */; };
 		A80724FD25377DA100CE4531 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80724FC25377DA100CE4531 /* ProgressView.swift */; };
 		A80821DE25393C8300F30FA3 /* CategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80821DD25393C8300F30FA3 /* CategoryEnum.swift */; };
-		A80918E22538C09400D5CA67 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80918E12538C09400D5CA67 /* WebViewController.swift */; };
 		A80AC4672534DEDB0019DAE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80AC4662534DEDB0019DAE0 /* AppDelegate.swift */; };
 		A80AC4692534DEDB0019DAE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80AC4682534DEDB0019DAE0 /* SceneDelegate.swift */; };
 		A80AC46B2534DEDB0019DAE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80AC46A2534DEDB0019DAE0 /* ViewController.swift */; };
@@ -40,7 +39,6 @@
 		A80724F925377BB000CE4531 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		A80724FC25377DA100CE4531 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		A80821DD25393C8300F30FA3 /* CategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEnum.swift; sourceTree = "<group>"; };
-		A80918E12538C09400D5CA67 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A80AC4632534DEDB0019DAE0 /* ProjectGutenberg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectGutenberg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80AC4662534DEDB0019DAE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A80AC4682534DEDB0019DAE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,11 +113,11 @@
 		A80AC4652534DEDB0019DAE0 /* ProjectGutenberg */ = {
 			isa = PBXGroup;
 			children = (
-				A80724FB25377D8A00CE4531 /* Views */,
-				A80724F825377BA500CE4531 /* Models */,
 				A80724ED2537626000CE4531 /* Extensions */,
 				A85C58512536164D003CDE65 /* Enums */,
 				A80AC47A2534DF570019DAE0 /* Montserrat */,
+				A80724F825377BA500CE4531 /* Models */,
+				A80724FB25377D8A00CE4531 /* Views */,
 				A80AC4A22534E1260019DAE0 /* ViewControllers */,
 				A80AC4A12534E11A0019DAE0 /* Delegate */,
 				A80AC46C2534DEDB0019DAE0 /* Main.storyboard */,
@@ -156,7 +154,6 @@
 				A80AC46A2534DEDB0019DAE0 /* ViewController.swift */,
 				A80AC4A32534E1480019DAE0 /* CategoryViewController.swift */,
 				A825D2DF2536982500A99C17 /* BookListViewController.swift */,
-				A80918E12538C09400D5CA67 /* WebViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				A825D2E02536982500A99C17 /* BookListViewController.swift in Sources */,
 				A80AC4692534DEDB0019DAE0 /* SceneDelegate.swift in Sources */,
 				A85C58552536172D003CDE65 /* FontsEnum.swift in Sources */,
-				A80918E22538C09400D5CA67 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

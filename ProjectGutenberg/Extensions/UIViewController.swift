@@ -32,12 +32,5 @@ extension UIViewController {
         return backgroundLbl
     }
     
-//    func getSearchTableViewBackgroundLabel()->UILabel {
-//        let backgroundLbl = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
-//        backgroundLbl.text = ConstantKey.noSearchMessage
-//        backgroundLbl.textColor = UIColor.red
-//        backgroundLbl.textAlignment = .center
-//        return backgroundLbl
-//    }
 }
 

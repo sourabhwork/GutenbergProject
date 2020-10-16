@@ -14,7 +14,6 @@ class NetworkServices {
     func fetchBooks(topic: String = "",searchText: String = "", completion: @escaping(_ success: Bool, _ message: String?, _ response: Array<Book>?)-> ()) {
         // Create url
         let urlString = ConstantURL.baseURL + ConstantURL.booksUrl + "topic=" + topic + "&search=" + searchText
-        print("URL String", urlString)
         guard let url = URL(string: urlString) else {
             completion(false, ConstantKey.urlNotValid, nil)
             return
@@ -44,7 +43,7 @@ class NetworkServices {
                     // Parsing data using JSONSerialization and pass data to viewcontroller through completion
                     
                     if let rootDictionary = try! JSONSerialization.jsonObject(with: convertData, options: .mutableContainers) as? NSDictionary {
-                        print("Root dictionary☹️ == ",rootDictionary)
+                        print("Root dictionary == ",rootDictionary)
                         if let resultArray = rootDictionary.object(forKey: ConstantKey.results) as? NSArray {
                             var booksArray = Array<Book>()
                             for result in resultArray {
@@ -70,12 +69,10 @@ class NetworkServices {
                                         if let imageFormatString = formatDictionary.object(forKey: ConstantKey.imageJPEG) as? String {
                                             book.imageURL = imageFormatString
                                             booksArray.append(book)
-                                            print("Book Title",book.title)
                                             // Get browser url
                                             if let textPlainUrl = formatDictionary.object(forKey: ConstantKey.textPlain) as? String {
                                                 if let url = URL(string: textPlainUrl)  {
                                                     if !url.lastPathComponent.contains(ConstantKey.zip) {
-                                                        print("text url=",url.lastPathComponent)
                                                         book.browserURL = textPlainUrl
                                                     }
                                                 }
@@ -83,15 +80,13 @@ class NetworkServices {
                                             if let pdfUrl = formatDictionary.object(forKey: ConstantKey.applicationPDF) as? String {
                                                 if let url = URL(string: pdfUrl) {
                                                     if !url.lastPathComponent.contains(ConstantKey.zip) {
-                                                        print("PDF URL", pdfUrl)
                                                         book.browserURL = pdfUrl
                                                     }
                                                 }
                                             }
                                             if let htmlUrl = formatDictionary.object(forKey: ConstantKey.textHTML) as? String{
                                                 if let url = URL(string: htmlUrl) {
-                                                    if !url.lastPathComponent.contains(ConstantKey.zip) {
-                                                        print("html url =",url.lastPathComponent)
+                                                    if !url.lastPathComponent.contains(ConstantKey.zip) {                                                        
                                                         book.browserURL = htmlUrl
                                                     }
                                                 }

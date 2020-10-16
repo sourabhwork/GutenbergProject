@@ -134,9 +134,11 @@ class CategoryViewController: UIViewController {
         navigateToNextVC()
     }
 
+    // Transition to next screen
     private func navigateToNextVC() {
         let storyboard = UIStoryboard(name: ConstantKey.main, bundle: nil)
         if let bookListVC = storyboard.instantiateViewController(withIdentifier: ViewControllerIdentifierConstant.bookListVC) as? BookListViewController {
+            // pass data to next VC
             bookListVC.categoryEnum = self.currentCategoryEnum
             self.navigationController?.pushViewController(bookListVC, animated: true)
         }
